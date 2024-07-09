@@ -11,7 +11,7 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         fields = [
             'first_name', 'last_name', 'username', 'email', 'profile_picture', 'user_type',
-            'address_line1', 'city', 'state', 'pincode', 'password', 'confirm_password'
+            'address_line1', 'city', 'state', 'pincode', 'password1', 'password2'
         ]
 
     def clean_confirm_password(self):
