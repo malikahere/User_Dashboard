@@ -1,12 +1,44 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>HomePage</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{% static 'dashboard.jpg' %}'); 
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin-top: 50px;
+            padding: 50px ;
+            backdrop-filter: blur(20px);
+        }
+        h1 {
+            color: black;
+            margin-bottom: 50px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 60px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome to the User Dashboard</h2>
-    <a href="{% url 'signup' %}">Signup</a>
-    <a href="{% url 'login' %}">Login</a>
+    <h1>Welcome to User Dashboard !</h1>
+    <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn">Login</a>
 </body>
 </html>
