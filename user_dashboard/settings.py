@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-1fz^u@n-v*1j$bnpz&pu^9ud^-1=!1qet-oz2%qqrgbdxy1wif
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['user-dashboard-ivja.onrender.com']
+ALLOWED_HOSTS = ['user-dashboard-ivja.onrender.com', '127.0.0.1']
 
 
 # Application definition
