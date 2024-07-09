@@ -108,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ALLOWED_HOSTS = ['user-dashboard-ivja.onrender.com']
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
