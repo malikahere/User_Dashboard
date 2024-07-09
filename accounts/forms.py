@@ -3,9 +3,9 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 
-class CustomUserCreationForm(forms.ModelForm):
-    password= forms.CharField(label='Password', widget=forms.PasswordInput)
-    confirm_password = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
+class CustomUserCreationForm(UserCreationForm):
+    password1= forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2= forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
 
     class Meta:
         model = CustomUser
@@ -15,8 +15,8 @@ class CustomUserCreationForm(forms.ModelForm):
         ]
 
     def clean_confirm_password(self):
-        password= self.cleaned_data.get("password")
-        confirm_password = self.cleaned_data.get("confirm_password")
-        if password and confirm_password and password!= confirm_password:
+        password1= self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
+        if password1 and password2 and password1!= password2:
             raise forms.ValidationError("Passwords don't match")
-        return confirm_password
+        return password2
