@@ -127,9 +127,10 @@ import os
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Adjust this to match your project structure
-]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'static'),
+)
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add this if not already included to serve static files during development
